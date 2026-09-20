@@ -1,0 +1,62 @@
+[b_quality] ctx=32768 n_ctx=32768 ctk=q8_0 ctv=q8_0 load=7s VRAMpeak=7674MiB write_cn:FAIL | write_cn:FAIL | outline:first=9.2s,tot=63.8s | math:first=24.9s,tot=49.3s | code:FAIL | code:FAIL | summary:first=72.0s,tot=73.4s | json:first=17.8s,tot=24.7s | trap:FAIL | trap:FAIL | synonyms:FAIL | synonyms:FAIL | toolcall=YES | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[b_q_nothink] ctx=32768 n_ctx=32768 ctk=q8_0 ctv=q8_0 load=13s VRAMpeak=7634MiB write_cn:first=2.2s,tot=34.4s,out=247,think=0 | outline:first=2.2s,tot=72.6s,out=883,think=0 | math:first=3.1s,tot=48.1s,out=505,think=0 | code:first=1.4s,tot=63.1s,out=1455,think=0 | summary:first=24.6s,tot=30.7s,out=82,think=0 | json:first=2.3s,tot=9.0s,out=139,think=0 | trap:first=1.6s,tot=42.7s,out=746,think=0 | synonyms:first=1.9s,tot=9.0s,out=99,think=0 | toolcall=YES | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[vram_A_8k_q8] ctx=8192 n_ctx=8192 ctk=q8_0 ctv=q8_0 load=7s VRAMpeak=7648MiB code:first=23.6s,tot=109.1s,out=1370,think=230 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[vram_B_32k_q4] ctx=32768 n_ctx=32768 ctk=q4_0 ctv=q4_0 load=7s VRAMpeak=7617MiB code:first=31.4s,tot=88.5s,out=1071,think=330 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[vram_D_cp1] ctx=32768 n_ctx=32768 ctk=q8_0 ctv=q8_0 load=5s VRAMpeak=7611MiB code:first=1.0s,tot=47.8s,out=1488,think=0 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[vram_E_smallbatch] ctx=32768 n_ctx=32768 ctk=q8_0 ctv=q8_0 load=5s VRAMpeak=7655MiB code:first=1.0s,tot=47.9s,out=1514,think=0 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[vram_F_np1] ctx=32768 n_ctx=32768 ctk=q8_0 ctv=q8_0 load=5s VRAMpeak=7408MiB code:first=0.3s,tot=21.6s,out=1296,think=0 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[b_q_final] ctx=32768 n_ctx=32768 ctk=q8_0 ctv=q8_0 load=5s VRAMpeak=7410MiB write_cn:first=0.3s,tot=5.5s,out=225,think=0 | outline:first=0.4s,tot=18.0s,out=872,think=0 | math:first=0.5s,tot=12.5s,out=516,think=0 | code:first=0.5s,tot=21.6s,out=1463,think=0 | summary:first=2.7s,tot=5.2s,out=89,think=0 | json:first=0.7s,tot=2.8s,out=126,think=0 | trap:first=0.4s,tot=14.0s,out=703,think=0 | synonyms:first=0.5s,tot=2.2s,out=74,think=0 | toolcall=YES | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[spec_base] ctx=8192 n_ctx=8192 ctk=q8_0 ctv=q8_0 load=5s VRAMpeak=6551MiB code:first=0.4s,tot=21.6s,out=1421,think=0 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[ornA_base] ctx=8192 n_ctx=8192 ctk=turbo4 ctv=turbo4 load=15s VRAMpeak=6594MiB write_cn:first=5.4s,tot=10.4s,out=278,think=542 | outline:first=11.2s,tot=12.3s,out=90,think=725 | math:无正文(tot=12.0s,think=1309) | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[ornB_mtp_turbo] ctx=8192 n_ctx=8192 ctk=turbo4 ctv=turbo4 load=13s VRAMpeak=6648MiB code:无正文(tot=19.0s,think=1289) | offload=? | spec: acceptance = 0.86935 (  173 accepted /   199 generated)
+[ornC_mtp_q8] ctx=8192 n_ctx=8192 ctk=q8_0 ctv=q8_0 load=13s VRAMpeak=6568MiB code:无正文(tot=32.1s,think=609) | offload=? | spec: acceptance = 0.00113 (    2 accepted /  1776 generated)
+[ornD_mtp_f16] ctx=8192 n_ctx=8192 ctk=f16 ctv=f16 load=13s VRAMpeak=6633MiB code:无正文(tot=17.9s,think=2386) | offload=? | spec: acceptance = 0.88973 (  234 accepted /   263 generated)
+[ornA2_base_turbo] ctx=8192 n_ctx=8192 ctk=turbo4 ctv=turbo4 load=13s VRAMpeak=6547MiB code:first=7.2s,tot=15.0s,out=892,think=599 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[ornA3_base_f16] ctx=8192 n_ctx=8192 ctk=f16 ctv=f16 load=13s VRAMpeak=6517MiB code:无正文(tot=15.4s,think=2171) | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[ornCP_8] ctx=32768 n_ctx=32768 ctk=turbo4 ctv=turbo4 load=13s VRAMpeak=6535MiB write_cn:无正文(tot=10.8s,think=581) | outline:first=9.5s,tot=12.3s,out=198,think=1513 | math:first=10.8s,tot=12.2s,out=96,think=982 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[ornCP_64] ctx=32768 n_ctx=32768 ctk=turbo4 ctv=turbo4 load=13s VRAMpeak=6529MiB write_cn:无正文(tot=10.8s,think=555) | outline:无正文(tot=12.4s,think=835) | math:first=8.7s,tot=12.3s,out=250,think=781 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[ornCP_256] ctx=32768 n_ctx=32768 ctk=turbo4 ctv=turbo4 load=13s VRAMpeak=6532MiB write_cn:first=5.9s,tot=10.6s,out=305,think=742 | outline:无正文(tot=12.2s,think=788) | math:无正文(tot=12.1s,think=1361) | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[ornCP_16_retry] ctx=32768 n_ctx=32768 ctk=turbo4 ctv=turbo4 load=13s VRAMpeak=6526MiB write_cn:无正文(tot=10.8s,think=1078) | outline:无正文(tot=12.1s,think=828) | math:无正文(tot=12.2s,think=1178) | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[ornE_mtp_nopmin] ctx=8192 n_ctx=8192 ctk=turbo4 ctv=turbo4 load=13s VRAMpeak=6676MiB code:无正文(tot=21.3s,think=1428) | offload=? | spec: acceptance = 0.27653 (  271 accepted /   980 generated)
+############ Phase p1  2026-09-19 01:28:45 ############
+C1_run1 PP512=287.57±0.00 TG128=28.48±0.00 2026-09-19 01:28:58
+C1_run2 PP512=285.70±0.00 TG128=28.59±0.00 2026-09-19 01:29:10
+C1_run3 PP512=285.91±0.00 TG128=28.00±0.00 2026-09-19 01:29:22
+C1_run4 PP512=288.88±0.00 TG128=28.96±0.00 2026-09-19 01:29:33
+C1_run5 PP512=285.26±0.00 TG128=28.31±0.00 2026-09-19 01:29:45
+C1_run6 FAIL rc=127 2026-09-19 01:29:46
+C2_run1 PP512=287.54±0.00 TG128=28.42±0.00 2026-09-19 01:29:57
+C2_run2 PP512=259.84±0.00 TG128=28.50±0.00 2026-09-19 01:30:07
+C2_run3 PP512=290.57±0.00 TG128=28.40±0.00 2026-09-19 01:30:18
+C2_run4 PP512=282.29±0.00 TG128=28.19±0.00 2026-09-19 01:30:29
+C2_run5 PP512=287.67±0.00 TG128=28.49±0.00 2026-09-19 01:30:39
+C2_run6 PP512=288.96±0.00 TG128=28.49±0.00 2026-09-19 01:30:50
+C3_run1 PP512=288.47±0.00 TG128=28.52±0.00 2026-09-19 01:31:00
+C3_run2 PP512=287.16±0.00 TG128=28.46±0.00 2026-09-19 01:31:11
+C3_run3 PP512=288.16±0.00 TG128=28.44±0.00 2026-09-19 01:31:22
+C3_run4 PP512=286.92±0.00 TG128=28.52±0.00 2026-09-19 01:31:32
+C3_run5 PP512=288.46±0.00 TG128=28.51±0.00 2026-09-19 01:31:43
+C3_run6 PP512=287.51±0.00 TG128=28.50±0.00 2026-09-19 01:31:53
+############ Phase p3  2026-09-19 01:33:59 ############
+K1_f16 PP512=288.15±0.00 TG128=28.75±0.00 2026-09-19 01:34:10
+K2_q8 PP512=288.66±0.00 TG128=28.49±0.00 2026-09-19 01:34:20
+K3_q4 PP512=288.24±0.00 TG128=28.50±0.00 2026-09-19 01:34:31
+K4 SKIP (bench 不支持, 转 Phase 5) 2026-09-19 01:34:31
+############ Phase p5pp  2026-09-19 01:35:28 ############
+P0_MMQ_ub512 PP512=287.53±0.00 TG128=28.62±0.00 2026-09-19 01:35:39
+P1_cuBLAS_ub512 PP512=451.49±0.00 TG128=28.46±0.00 2026-09-19 01:35:48
+P2_cuBLAS_ub1024 PP512=453.74±0.00 TG128=28.54±0.00 2026-09-19 01:35:57
+P3_MMQ_ub256 PP512=292.62±0.00 TG128=28.49±0.00 2026-09-19 01:36:08
+P4_MMQ_ub128 PP512=292.79±0.00 TG128=28.56±0.00 2026-09-19 01:36:18
+P5_FORCEMMQ_ub512 PP512=288.09±0.00 TG128=28.43±0.00 2026-09-19 01:36:29
+############ Phase p4quick  2026-09-19 01:37:23 ############
+CTX_32K PP512=250.90±0.00 TG128=20.94±0.00 2026-09-19 01:39:48
+CTX_64K PP512=222.02±0.00 TG128=16.49±0.00 2026-09-19 01:45:09
+[b_cublas_q] ctx=32768 n_ctx=32768 ctk=q8_0 ctv=q8_0 load=5s VRAMpeak=7496MiB write_cn:first=0.4s,tot=6.1s,out=228,think=0 | outline:first=0.4s,tot=18.1s,out=837,think=0 | math:first=0.5s,tot=18.1s,out=814,think=0 | code:first=0.4s,tot=21.6s,out=1542,think=0 | summary:first=2.3s,tot=4.4s,out=88,think=0 | json:first=0.5s,tot=2.6s,out=127,think=0 | trap:first=0.4s,tot=14.5s,out=697,think=0 | synonyms:first=0.4s,tot=3.2s,out=104,think=0 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+############ Phase p4  2026-09-19 01:56:32 ############
+CTX_32K PP512=250.69±0.00 TG128=20.82±0.00 2026-09-19 01:58:57
+CTX_48K PP512=235.98±0.00 TG128=18.43±0.00 2026-09-19 02:03:11
+CTX_64K PP512=221.69±0.00 TG128=16.48±0.00 2026-09-19 02:07:59
+CTX_96K FAIL rc=127 2026-09-19 02:41:52
+[b_ctx128_load] ctx=131072 n_ctx=131072 ctk=q4_0 ctv=q4_0 load=5s VRAMpeak=7851MiB write_cn:first=2.0s,tot=24.7s,out=219,think=0 | outline:first=1.8s,tot=66.5s,out=889,think=0 | math:first=0.4s,tot=16.7s,out=627,think=0 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
+[b_bat64k] ctx=65536 n_ctx=65536 ctk=q4_0 ctv=q4_0 load=5s VRAMpeak=7588MiB write_cn:first=0.3s,tot=6.3s,out=252,think=0 | outline:first=0.4s,tot=18.0s,out=883,think=0 | math:first=0.5s,tot=10.4s,out=437,think=0 | code:first=0.4s,tot=21.7s,out=1434,think=0 | summary:first=2.8s,tot=5.0s,out=83,think=0 | json:first=0.7s,tot=2.9s,out=127,think=0 | trap:first=0.4s,tot=8.8s,out=448,think=0 | synonyms:first=0.6s,tot=3.0s,out=98,think=0 | offload=? | spec: (日志无 draft 统计 = 投机未生效)
