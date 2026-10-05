@@ -10,6 +10,11 @@
 
 **引擎**：**PrismML b10709**（CUDA 静态链接；b10685→b10709 = PP +15% / TG +24%，A/B 实测）
 
+
+![bonsai2-27b-8g-tuning 实测图表](docs/vram-ceiling.png)
+
+**8GB 卡的实测边界**：左图是 27B 三值模型的深度曲线，右图各上下文配置的显存占用——128K 时已达 7851 MiB，紧贴 8GB 上限。原始数据见 `data/data_bonsai`。
+
 ## 生产配置（start.bat 即仓库内同名文件，零漂移）
 
 ```bat
